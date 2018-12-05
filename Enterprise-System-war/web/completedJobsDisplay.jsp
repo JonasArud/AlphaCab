@@ -74,24 +74,6 @@
         </div><br>
         <br><br>
         <h2 align="center">COMPLETED JOBS</h2><br>
-
-
-        <%
-            String driverName = "org.apache.derby.jdbc.ClientDriver";
-            String connectionUrl = "jdbc:derby://localhost:1527/userlogin";
-            String userId = "pass";
-            String password = "pass";
-
-            try {
-                Class.forName(driverName);
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            Connection connection = null;
-            Statement statement = null;
-            ResultSet resultSet = null;
-        %>
         <section>
             <div id="tbl-header">
                 <table>
