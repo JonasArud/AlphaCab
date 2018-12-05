@@ -31,8 +31,8 @@ public interface WebServices {
      * @param destination
      * @return
      *     returns java.lang.String
-     * @throws IOException_Exception
      * @throws ProtocolException_Exception
+     * @throws IOException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")

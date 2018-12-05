@@ -12,9 +12,7 @@
     String userPassword = request.getParameter("pw");
     String dateOfBirth = request.getParameter("dob");
 
-    //  int number = Integer.parseInt(id);
     System.out.println(id);
-//  System.out.println(number);
     String driverName = "org.apache.derby.jdbc.ClientDriver";
     String connectionUrl = "jdbc:derby://localhost:1527/userlogin";
     String userId = "pass";
@@ -27,10 +25,7 @@
 
     Connection connection = null;
     Statement statement = null;
-
-    String test = "Yeet";
-    String date = "1982-10-10";
-
+    
     //id = "2";
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     System.out.println(userType);
