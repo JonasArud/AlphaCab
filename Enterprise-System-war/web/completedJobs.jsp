@@ -93,46 +93,12 @@
             ResultSet resultSet = null;
         %>
         <section>
-            <div id="tbl-header">
-                <table>
-                    <tr>
-                                <td><b> Customer ID </b></td>
-                                <td><b> Pick-up Date and Time </b></td>
-                                <td><b> Distance (Miles) </b></td>
-                                <td><b> Journey Charge </b></td>
-                                <td><b> Pick Up Location </b></td>
-                                <td><b> Destination </b></td>
-                    </tr>
-                </table>
-            </div>    
-            <%
-                try {
-                    connection = DriverManager.getConnection(connectionUrl, userId, password);
-                    statement = connection.createStatement();
-                    String sql = "SELECT * FROM PASS.BOOKING_TABLE WHERE JOBCOMPLETED = true";
-
-                    resultSet = statement.executeQuery(sql);
-                    while (resultSet.next()) {
-            %>
-            <div id="tbl-content">
-                <table>
-                    <tr>
-                        <td><%=resultSet.getString("customerID")%></td>
-                        <td><%=resultSet.getString("startTime")%></td>
-                        <td><%=resultSet.getString("distanceInMiles")%></td>
-                        <td>£<%=resultSet.getString("paymentAmount")%></td>
-                        <td><%=resultSet.getString("originName")%></td>
-                        <td><%=resultSet.getString("destinationName")%></td>
-                    </tr>
-                </table>
-            </div>
-            <%
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            %>
+            <form method="POST" name="completeJobs" action="CompleteJobs">
+                Insert a date to view completed jobs:<br>         
+                <input type="date" name="StartDate">
+                <br>
+                <button type=submit" name="submit" value="Submit">Calculate</button>
+            </form> 
         </section>
     </body>
 </html>
