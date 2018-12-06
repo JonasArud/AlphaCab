@@ -75,12 +75,26 @@
         <br><br>
         <h2 align="center">COMPLETED JOBS</h2><br>
         <section>
-            <form method="POST" name="completeJobs" action="CompleteJobs">
-                Insert a date to view completed jobs:<br>         
-                <input type="date" name="StartDate">
-                <br>
-                <button type=submit" name="submit" value="Submit">Calculate</button>
-            </form> 
+            <div id="tbl-header">
+                <table>
+                    <tr>
+                                <td><b> Customer ID </b></td>
+                                <td><b> Journey Charge </b></td>
+                                <td><b> Pick Up Location </b></td>
+                                <td><b> Destination </b></td>
+                    </tr>
+                </table>
+            </div>    
+            <div id="tbl-content">
+                <table>
+                    <tr>
+                        <td>${customerID}</td>
+                        <td>£${paymentAmount}</td>
+                        <td>${originName}</td>
+                        <td>${destinationName}</td>
+                    </tr>
+                </table>
+            </div>
         </section>
     </body>
 </html>
