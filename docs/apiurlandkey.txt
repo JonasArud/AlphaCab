@@ -1,0 +1,2 @@
+    private static String api = "AIzaSyC30fCnCqt0kI4tdOqRMm4mg0kW5oe1tGo"; //oc do not steal 
+    URL url = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+tf+",UK&destinations="+tf1+",UK&key=" + api);
