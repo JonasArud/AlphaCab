@@ -12,9 +12,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
-
         <title> View Customers </title>
-
     </head>
     <body>
         <%

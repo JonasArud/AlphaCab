@@ -228,24 +228,24 @@
                     <tr>
                     <form class="formCenter" role="form" action="CompleteJobServlet" method="post">
                         <td> <input type="text" class="textField" name="id" placeholder="Driver ID" value="<%=result2.getString("DriverID")%>" readonly="true"></td>
-                        
+
                         <td><%=result2.getString("StartTime")%></td>
-                        
+
                         <td><%=result2.getString("endTime")%></td>
-                        
+
                         <td><%=result2.getString("CustomerID")%></td>
-                     
+
                         <td><%=result2.getString("Bookingreference")%></td>
-                   
+
                         <td><%=result2.getString("Distanceinmiles")%></td>
-                     
+
                         <td><%=result2.getString("Paymentamount")%></td>
-                     
+
                         <td><%=result2.getString("paymenttime")%></td>
-                      
+
                         <td><button type="submit" class="submitButton">Complete Job</button></td>
                     </form>
-                    
+
                     </tr>
                 </table>
             </div>

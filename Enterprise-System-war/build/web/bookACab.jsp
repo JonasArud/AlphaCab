@@ -8,7 +8,6 @@
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
         <title> Customer Home Page </title>
-        
     </head>
 
     <body>

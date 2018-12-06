@@ -17,7 +17,6 @@
     </head>
 
     <body>
-
         <%
             //allow access only if session exists
             String user = null;
@@ -108,7 +107,7 @@
                             resultSet = statement.executeQuery(sql);
                             DecimalFormat df = new DecimalFormat("##.00");
                             while (resultSet.next()) {
-                            double VATCalc = (Double.parseDouble(resultSet.getString("paymentamount"))) / 5;
+                                double VATCalc = (Double.parseDouble(resultSet.getString("paymentamount"))) / 5;
                     %>
                     <div id="tbl-content">
                         <table>

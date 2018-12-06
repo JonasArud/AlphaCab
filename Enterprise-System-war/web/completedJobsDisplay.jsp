@@ -12,7 +12,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
-
         <title> Completed Jobs </title>
     </head>
 
@@ -78,10 +77,10 @@
             <div id="tbl-header">
                 <table>
                     <tr>
-                                <td><b> Customer ID </b></td>
-                                <td><b> Journey Charge </b></td>
-                                <td><b> Pick Up Location </b></td>
-                                <td><b> Destination </b></td>
+                        <td><b> Customer ID </b></td>
+                        <td><b> Journey Charge </b></td>
+                        <td><b> Pick Up Location </b></td>
+                        <td><b> Destination </b></td>
                     </tr>
                 </table>
             </div>    

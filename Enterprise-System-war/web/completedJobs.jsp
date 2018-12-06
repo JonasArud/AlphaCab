@@ -12,7 +12,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
-
         <title> Completed Jobs </title>
     </head>
 

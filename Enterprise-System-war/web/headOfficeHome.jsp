@@ -7,11 +7,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
-
         <title> Head Office Home Page </title>
-
     </head>
-
     <body>
         <%
             //allow access only if session exists
@@ -65,19 +62,19 @@
         </ul>
     <tr>
         <td> <form action="LogoutServlet" method="post">
-            <input style="float:right" class="ButtonSubmit" type="submit" value="Logout" >
+                <input style="float:right" class="ButtonSubmit" type="submit" value="Logout" >
             </form></td>
-        
-    <td><form action="updateRateIncrement" METHOD="post">
-            <td><input type="text" style="float:left" class="textField" name="inc"  placeholder="Increment Value">
-                <input style="float:left" class="ButtonSubmit" type="submit" value="Less than 5 mile increment"></td>
-        </form></td>
+
+        <td><form action="updateRateIncrement" METHOD="post">
+                <td><input type="text" style="float:left" class="textField" name="inc"  placeholder="Increment Value">
+                    <input style="float:left" class="ButtonSubmit" type="submit" value="Less than 5 mile increment"></td>
+            </form></td>
     </tr>
-       
-        <div class="mainHeader" align="center">
-            <img src="Images/logo.png" alt="Alpha Cab">
-        </div>
-    </body>
+
+    <div class="mainHeader" align="center">
+        <img src="Images/logo.png" alt="Alpha Cab">
+    </div>
+</body>
 </html>
 
 

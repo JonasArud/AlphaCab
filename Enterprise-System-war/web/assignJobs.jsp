@@ -172,7 +172,6 @@
             String userId = "pass";
             String password = "pass";
 
-            
             Connection connection = null;
             Statement statement = null;
             ResultSet resultSet = null;
@@ -196,42 +195,41 @@
             <%
                 try {
                     connection = DriverManager.getConnection(connectionUrl, userId, password);
-                
-                        PreparedStatement statement2 = connection.prepareStatement("SELECT * FROM BOOKING_TABLE WHERE DRIVERID = 0");
-                        
-                        ResultSet result2 = statement2.executeQuery();
-                        System.out.println("className.methodName()");
-                        while (result2.next()) {
+
+                    PreparedStatement statement2 = connection.prepareStatement("SELECT * FROM BOOKING_TABLE WHERE DRIVERID = 0");
+
+                    ResultSet result2 = statement2.executeQuery();
+                    System.out.println("className.methodName()");
+                    while (result2.next()) {
             %>
             <div id="tbl-content">
                 <table>
                     <tr>
                     <form class="formCenter" role="form" action="AssignDriverServlet" method="post">
                         <td> <input type="text" class="textField" name="id" placeholder="Driver ID"></td>
-                        
+
                         <td><%=result2.getString("StartTime")%></td>
-                        
+
                         <td><%=result2.getString("endTime")%></td>
-                        
+
                         <td><input type="text" class="textField" name="cid" value="<%=result2.getString("CustomerID")%>"></td>
-                     
+
                         <td><%=result2.getString("Bookingreference")%></td>
-                   
+
                         <td><%=result2.getString("Distanceinmiles")%></td>
-                     
+
                         <td><%=result2.getString("Paymentamount")%></td>
-                     
+
                         <td><%=result2.getString("paymenttime")%></td>
-                      
+
                         <td><button type="submit" class="submitButton">Assign Driver</button></td>
                     </form>
-                    
+
                     </tr>
                 </table>
             </div>
             <%
-                        }
-                    
+                    }
 
                 } catch (Exception e) {
                     e.printStackTrace();

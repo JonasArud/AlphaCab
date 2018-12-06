@@ -25,7 +25,7 @@
 
     Connection connection = null;
     Statement statement = null;
-    
+
     //id = "2";
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     System.out.println(userType);

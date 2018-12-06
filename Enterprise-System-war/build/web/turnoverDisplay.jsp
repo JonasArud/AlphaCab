@@ -1,9 +1,3 @@
-<%-- 
-    Document   : turnoverDisplay
-    Created on : Dec 5, 2018, 11:37:29 AM
-    Author     : JonasArud
---%>
-
 <%@ page language="java" 
          contentType="text/html; charset=windows-1256"
          pageEncoding="windows-1256"
@@ -13,10 +7,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="primaryStyle.css">
-
         <title> View Turnover </title>
     </head>
-
     <body>
         <%
             //allow access only if session exists
@@ -44,33 +36,33 @@
                         userType = cookie.getValue();
 
                     }
-                    
+
                 }
             } else {
                 sessionID = session.getId();
             }
-            if(userType.equals("HeadOffice")){
+            if (userType.equals("HeadOffice")) {
                 System.out.println("Welcome admin");
 
-            }else{
+            } else {
                 System.out.println("You are not an admin.. GET OUT!");
-                response.sendRedirect("index.html");    
+                response.sendRedirect("index.html");
             }
-  
+
         %>
 
         <ul>
-        <li><a href="headOfficeHome.jsp">Home</a></li>
-        <li><a href="customers.jsp">View Customers</a></li>
-        <li><a href="drivers.jsp">View Drivers</a></li>
-        <li><a class="active" href="turnover.jsp">View Turnover</a></li>
-        <li><a href="completedJobs.jsp">Completed Jobs</a></li>
-        <li style="float:right" ><a><%=userName%></a></li>
+            <li><a href="headOfficeHome.jsp">Home</a></li>
+            <li><a href="customers.jsp">View Customers</a></li>
+            <li><a href="drivers.jsp">View Drivers</a></li>
+            <li><a class="active" href="turnover.jsp">View Turnover</a></li>
+            <li><a href="completedJobs.jsp">Completed Jobs</a></li>
+            <li style="float:right" ><a><%=userName%></a></li>
         </ul>
-              <form action="LogoutServlet" method="post">
-                <input style="float:right" class="ButtonSubmit" type="submit" value="Logout" >
-              </form>
-        
+        <form action="LogoutServlet" method="post">
+            <input style="float:right" class="ButtonSubmit" type="submit" value="Logout" >
+        </form>
+
         <h1>Turnover is: ${value} and ${counter} customer(s) have been served</h1>
     </body>
 </html>
