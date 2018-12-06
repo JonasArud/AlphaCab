@@ -60,6 +60,7 @@
             <li><a href="drivers.jsp">View Drivers</a></li>
             <li><a href="turnover.jsp">View Turnover</a></li>
             <li><a href="completedJobs.jsp">Completed Jobs</a></li>
+            <li><a href="assignJobs.jsp">Assign Jobs</a></li>
             <li style="float:right" ><a><%=userName%></a></li>
         </ul>
     <tr>
