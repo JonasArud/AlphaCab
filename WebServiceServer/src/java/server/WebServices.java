@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package server;
 
 import java.io.BufferedReader;
@@ -16,14 +11,11 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-/**
- *
- * @author JonasArud
- */
+
 @WebService(serviceName = "WebService")
 public class WebServices {
 
-        /**
+    /**
      * Web service operation
      */
     @WebMethod(operationName = "googleMapsDistance")
@@ -34,8 +26,7 @@ public class WebServices {
         con.setRequestMethod("GET");
         con.connect();
 
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
         String inputLine;
         StringBuffer content = new StringBuffer();
         while ((inputLine = in.readLine()) != null) {
@@ -45,8 +36,6 @@ public class WebServices {
         con.disconnect();
 
         JsonObject jsonObject = new JsonParser().parse(content.toString()).getAsJsonObject();
-
-
         String distance = jsonObject.getAsJsonArray("rows").get(0).getAsJsonObject().get("elements").getAsJsonArray().get(0).getAsJsonObject().get("distance").getAsJsonObject().get("value").getAsString();
         return distance;
     }
