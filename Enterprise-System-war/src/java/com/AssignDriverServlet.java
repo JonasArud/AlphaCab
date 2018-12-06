@@ -65,8 +65,9 @@ public class AssignDriverServlet extends HttpServlet {
             
             
             System.out.println(cid + " " + id);
-            PreparedStatement ps = currentCon.prepareStatement("UPDATE PASS.BOOKING_TABLE SET DRIVERID=1 WHERE CUSTOMERID=1");
-            ps.setString(0, id);
+            String qry = String.format("UPDATE PASS.BOOKING_TABLE SET DRIVERID=%s WHERE ID=%s", id, cid);
+            PreparedStatement ps = currentCon.prepareStatement(qry);
+          
             //PreparedStatement ps = connection.prepareStatement("UPDATE PASS.BOOKING_TABLE SET JOBCOMPLETED = false WHERE BOOKINGREFERENCE = I40DNT3J98419ZQXMMEZ");
             System.out.println("com.CompleteJobServlet.processRequest()");
             ps.executeUpdate();
